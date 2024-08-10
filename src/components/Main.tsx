@@ -1,4 +1,5 @@
 import style from "../assets/scss/common/main.module.scss"
+import {Menu} from "./Menu";
 
 export function Main() {
     return(
@@ -10,42 +11,7 @@ export function Main() {
                 </div>
 
                 {/*  메뉴 영역  */}
-                <div className={style.menuBoxWrapper}>
-                    <div className={style.menuButton}>
-                        <span className={style.menuText}>
-                            ALL
-                        </span>
-                    </div>
-
-                    <div className={style.menuButton}>
-                        <span className={style.menuText}>
-                            ANIMALS
-                        </span>
-                    </div>
-
-                    <div className={style.menuButton}>
-                        <span className={style.menuText}>
-                            COMPONENT
-                        </span>
-                    </div>
-
-                    <div className={`${style.menuButton} ${style.selected}`}>
-                        <span className={style.menuText}>
-                            OBJECTS
-                        </span>
-                    </div>
-
-                    <div className={style.menuButton}>
-                        <span className={style.menuText}>
-                            PEOPLE
-                        </span>
-                    </div>
-                    <div className={style.menuButton}>
-                        <span className={style.menuText}>
-                            SYMBOLS
-                        </span>
-                    </div>
-                </div>
+                <Menu />
 
             </div>
         </>
