@@ -27,4 +27,42 @@
       background-image: url("../../img/logo_img.png");
     }
   }
+
+  .menuBoxWrapper{
+    display: flex;
+    width: 1380px;
+    padding: 20px 10px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    border-radius: 30px;
+
+    background: #DAE2EC;
+    .menuButton{
+      display: flex;
+      padding: 10px 20px;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50px;
+      border: 1.5px solid var(--GrayScale-white, #FFF);
+      background: var(--EmojiFree-EFnavy-500_main, #383649);
+      box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+
+      > .menuText{
+        color: var(--GrayScale-white, #FFF);
+        text-align: center;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 130%; /* 20.8px */
+        letter-spacing: -0.48px;
+      }
+
+      &.selected{
+        background: var(--EmojiFree-EForange-500_main, #F4A418);
+      }
+    }
+  }
 }
