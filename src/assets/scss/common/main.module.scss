@@ -1,0 +1,30 @@
+.mainWrapper{
+  display: flex;
+  width: 1920px;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  background: #FFF;
+
+  .headerWrapper{
+    display: flex;
+    width: 1380px;
+    padding: 20px 50px;
+    //justify-content: space-between;
+    justify-content: center;
+    align-self: center;
+    align-items: flex-start;
+    border-radius: 0 0 30px 30px;
+    background: var(--EmojiFree-EFnavy-500_main, #383649);
+
+    > .headerImg{
+      display: flex;
+      align-self: center;
+      width: 154.5px;
+      height: 40px;
+      flex-shrink: 0;
+
+      background-image: url("../../img/logo_img.png");
+    }
+  }
+}
