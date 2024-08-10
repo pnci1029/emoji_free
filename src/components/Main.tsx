@@ -1,5 +1,6 @@
 import style from "../assets/scss/common/main.module.scss"
 import {Menu} from "./Menu";
+import {Filter} from "./Filter";
 
 export function Main() {
     return(
@@ -17,22 +18,7 @@ export function Main() {
                     <div className={style.contentsBox}>
 
                         {/*  검색 영역  */}
-                        <div className={style.searchBox}>
-
-                            {/*  문자 검색 영역  */}
-                            <div className={style.searchTextArea}>
-                                <input
-                                    placeholder={'Search Free Emoji'}
-                                    className={style.searchInput}
-                                />
-                                <div className={style.inputImg} />
-                            </div>
-
-                            {/*  필터  */}
-                            <div className={style.filterSearchBox}>
-
-                            </div>
-                        </div>
+                        <Filter />
 
                     </div>
                 </div>
