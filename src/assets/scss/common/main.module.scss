@@ -86,6 +86,7 @@
       border-radius: 30px;
       background: #FBFBFF;
 
+      // filter
       .searchBox {
         display: flex;
         justify-content: space-between;
@@ -135,19 +136,19 @@
         }
 
         // 버튼 소팅 스타일
-        .filterSearchBox{
+        .filterSearchBox {
           display: flex;
           align-items: center;
           gap: 20px;
           align-self: stretch;
 
-          .checkboxLabel{
+          .checkboxLabel {
             display: flex;
             min-width: 40px;
             align-items: center;
             gap: 5px;
 
-            .filterCheckbox{
+            .filterCheckbox {
               display: flex;
               width: 16px;
               height: 16px;
@@ -160,7 +161,7 @@
               background: #344151;
             }
 
-            > .filterText{
+            > .filterText {
               color: var(--GrayScale-G-700_bodytext, #404040);
               text-align: center;
               font-size: 16px;
@@ -171,7 +172,7 @@
             }
           }
 
-          .sortingWrapper{
+          .sortingWrapper {
             display: flex;
             width: 80px;
             padding: 4px 10px 4px 20px;
@@ -181,7 +182,7 @@
             border: 1px solid #6B6B6B;
             background: #F6F6F6;
 
-            > .sortingText{
+            > .sortingText {
               color: var(--GrayScale-G-700_bodytext, #404040);
               text-align: center;
               font-size: 16px;
@@ -191,7 +192,7 @@
               letter-spacing: -0.48px;
             }
 
-            .showMoreBtn{
+            .showMoreBtn {
               width: 12.27px;
               height: 7px;
               flex-shrink: 0;
@@ -202,5 +203,8 @@
         }
       }
     }
+
+
+
   }
 }
