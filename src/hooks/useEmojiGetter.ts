@@ -1,17 +1,16 @@
-import {useCallback} from "react";
-import {Emoji} from "../types/emoji";
+import {useCallback, useState} from "react";
+import {PageResponse} from "../types/emoji";
 import {getTestData} from "../slice/emojiSlice";
 import {useDispatch} from "react-redux";
 
 export function useEmojiGetter() {
     const dispatch = useDispatch<any>();
+    const [pageResponse, setPageResponse] = useState<PageResponse>();
 
     const getTest = useCallback(async () => {
-            const result: Emoji = await dispatch(getTestData()).unwrap();
-            console.log('ㅡㅡㅡㅡㅡㅡ')
-            console.log(result)
-            console.log('ㅡㅡㅡㅡㅡㅡ')
+            const result: PageResponse = await dispatch(getTestData()).unwrap();
             // setArticle(result);
+            setPageResponse(result);
             return result;
         },
         [dispatch]
@@ -19,5 +18,6 @@ export function useEmojiGetter() {
 
     return {
         getTest,
+        pageResponse
     };
 }
