@@ -1,5 +1,14 @@
 import style from "../assets/scss/common/main.module.scss"
 
+enum Category{
+    ALL = "ALL",
+    ANIMALS = "ANIMALS",
+    COMPONENT = "COMPONENT",
+    OBJECTS = "OBJECTS",
+    PEOPLE = "PEOPLE",
+    SYMBOLS = "SYMBOLS",
+}
+
 export function Menu() {
 
     const menuBox = [
@@ -15,32 +24,37 @@ export function Menu() {
         },
         {
             "name": "COMPONENT",
-            "number": 111,
+            "number": 11,
             "isSelected": false,
         },
         {
             "name": "OBJECTS",
-            "number": 111,
+            "number": 4155,
             "isSelected": false,
         },
         {
             "name": "PEOPLE",
-            "number": 111,
+            "number": 10,
             "isSelected": false,
         },
         {
             "name": "SYMBOLS",
-            "number": 111,
+            "number": 20211,
             "isSelected": false,
         },
     ]
+
+    const handleSelectedCategory = () =>{
+
+    }
+
     return (
         <>
             <div className={style.menuBoxWrapper}>
                 {menuBox.map((data, idx) => (
                     <div className={`${style.menuButton} ${data.isSelected ? style.selected : ''}`}>
                         <span className={style.menuText}>
-                            {data.name}
+                            {data.name}({data.number})
                         </span>
                     </div>
                 ))}
