@@ -5,15 +5,16 @@ export interface Emoji{
     downloadCount: number;
     createdAt: string;
     referred: Referred;
+    label: string;
 }
 
 export interface PageResponse{
-    "totalPages": number,
-    "size": number,
-    "totalElements": number,
-    "first": boolean,
-    "last": boolean,
-    "content": Emoji[];
+    totalPages: number,
+    size: number,
+    totalElements: number,
+    first: boolean,
+    last: boolean,
+    content: Emoji[];
 }
 
 enum Referred{
