@@ -3,20 +3,23 @@ import React from 'react';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
-import App from "./App";
 import {Main} from "./components/Main";
+import {store} from "./slice";
+import {Provider} from "react-redux";
 
 const container = document.getElementById("root")!;
 const root = createRoot(container);
 
 root.render(
     <React.StrictMode>
+        <Provider store={store}>
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Main />} >
                 </Route>
             </Routes>
         </BrowserRouter>
+        </Provider>
     </React.StrictMode>
 );
 
