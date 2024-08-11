@@ -52,7 +52,7 @@ export function Menu() {
         <>
             <div className={style.menuBoxWrapper}>
                 {menuBox.map((data, idx) => (
-                    <div className={`${style.menuButton} ${data.isSelected ? style.selected : ''}`}>
+                    <div className={`${style.menuButton} ${data.isSelected ? style.selected : ''}`} key={idx}>
                         <span className={style.menuText}>
                             {data.name}({data.number})
                         </span>

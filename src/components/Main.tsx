@@ -3,19 +3,14 @@ import {Menu} from "./Menu";
 import {Filter} from "./Filter";
 import {Emoji} from "./Emoji";
 import {Footer} from "./Footer";
-import {useEmojiGetter} from "../hooks/useEmojiGetter";
 
 export function Main() {
 
-    const {getTest} = useEmojiGetter()
-    // console.log(getTest)
-    const handleTest = () =>{
-        getTest().then();
-        console.log(getTest)
-    }
+
+
     return (
         <>
-            <div className={style.mainWrapper} onClick={handleTest}>
+            <div className={style.mainWrapper}>
                 {/*  메인 헤더 영역  */}
                 <div className={style.headerWrapper}>
                     <div className={style.headerImg}/>
